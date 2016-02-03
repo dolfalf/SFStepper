@@ -165,7 +165,7 @@ static int kDefaultMaxLength = 11;
         return NO;
     }
     
-    //複数チェック
+    //multiple sign check
     int dot_count = 0;
     int plus_count = 0;
     int minus_count = 0;
