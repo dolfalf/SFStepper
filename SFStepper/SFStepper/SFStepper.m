@@ -154,7 +154,7 @@ static int kDefaultMaxLength = 11;
     NSRange searchResultMinus = [text rangeOfString:@"-"];
     if((searchResultPlus.location != NSNotFound && searchResultPlus.location != 0) &&
        (searchResultMinus.location != NSNotFound && searchResultPlus.location != 0)) {
-        //先頭以外に＋ー文字列が表示中の場合、
+        //If + over string in addition to the top is in display,
         return NO;
     }
     
@@ -192,7 +192,7 @@ static int kDefaultMaxLength = 11;
         }
     }
     
-    //数字も真ん中に「+」、「-」が存在する場合
+    //Number is also in the middle "+", - if there is a ""
     if (text.length > 1 && ([text hasSuffix:@"-"] || [text hasSuffix:@"+"])) {
         return NO;
     }
