@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBCC507D1C6188A3000DAC28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC507C1C6188A3000DAC28 /* main.m */; };
+		BBCC50801C6188A3000DAC28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC507F1C6188A3000DAC28 /* AppDelegate.m */; };
+		BBCC50831C6188A3000DAC28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC50821C6188A3000DAC28 /* ViewController.m */; };
+		BBCC50861C6188A3000DAC28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCC50841C6188A3000DAC28 /* Main.storyboard */; };
+		BBCC50881C6188A3000DAC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBCC50871C6188A3000DAC28 /* Assets.xcassets */; };
+		BBCC508B1C6188A3000DAC28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCC50891C6188A3000DAC28 /* LaunchScreen.storyboard */; };
+		BBCC50961C6188A3000DAC28 /* SFStepperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC50951C6188A3000DAC28 /* SFStepperTests.m */; };
+		BBCC50A41C618939000DAC28 /* SFStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC50A21C618939000DAC28 /* SFStepper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBCC50921C6188A3000DAC28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBCC50701C6188A3000DAC28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBCC50771C6188A3000DAC28;
+			remoteInfo = SFStepper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BBCC50781C6188A3000DAC28 /* SFStepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFStepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCC507C1C6188A3000DAC28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BBCC507E1C6188A3000DAC28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BBCC507F1C6188A3000DAC28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BBCC50811C6188A3000DAC28 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BBCC50821C6188A3000DAC28 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BBCC50851C6188A3000DAC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBCC50871C6188A3000DAC28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBCC508A1C6188A3000DAC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BBCC508C1C6188A3000DAC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCC50911C6188A3000DAC28 /* SFStepperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFStepperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCC50951C6188A3000DAC28 /* SFStepperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFStepperTests.m; sourceTree = "<group>"; };
+		BBCC50971C6188A3000DAC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCC50A11C618939000DAC28 /* SFStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFStepper.h; sourceTree = "<group>"; };
+		BBCC50A21C618939000DAC28 /* SFStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFStepper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBCC50751C6188A3000DAC28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCC508E1C6188A3000DAC28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBCC506F1C6188A3000DAC28 = {
+			isa = PBXGroup;
+			children = (
+				BBCC507A1C6188A3000DAC28 /* SFStepper */,
+				BBCC50941C6188A3000DAC28 /* SFStepperTests */,
+				BBCC50791C6188A3000DAC28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBCC50791C6188A3000DAC28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC50781C6188A3000DAC28 /* SFStepper.app */,
+				BBCC50911C6188A3000DAC28 /* SFStepperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBCC507A1C6188A3000DAC28 /* SFStepper */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC507E1C6188A3000DAC28 /* AppDelegate.h */,
+				BBCC507F1C6188A3000DAC28 /* AppDelegate.m */,
+				BBCC50A01C6188D9000DAC28 /* SFStepper */,
+				BBCC50811C6188A3000DAC28 /* ViewController.h */,
+				BBCC50821C6188A3000DAC28 /* ViewController.m */,
+				BBCC50841C6188A3000DAC28 /* Main.storyboard */,
+				BBCC50871C6188A3000DAC28 /* Assets.xcassets */,
+				BBCC50891C6188A3000DAC28 /* LaunchScreen.storyboard */,
+				BBCC508C1C6188A3000DAC28 /* Info.plist */,
+				BBCC507B1C6188A3000DAC28 /* Supporting Files */,
+			);
+			path = SFStepper;
+			sourceTree = "<group>";
+		};
+		BBCC507B1C6188A3000DAC28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC507C1C6188A3000DAC28 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBCC50941C6188A3000DAC28 /* SFStepperTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC50951C6188A3000DAC28 /* SFStepperTests.m */,
+				BBCC50971C6188A3000DAC28 /* Info.plist */,
+			);
+			path = SFStepperTests;
+			sourceTree = "<group>";
+		};
+		BBCC50A01C6188D9000DAC28 /* SFStepper */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC50A11C618939000DAC28 /* SFStepper.h */,
+				BBCC50A21C618939000DAC28 /* SFStepper.m */,
+			);
+			path = SFStepper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBCC50771C6188A3000DAC28 /* SFStepper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBCC509A1C6188A3000DAC28 /* Build configuration list for PBXNativeTarget "SFStepper" */;
+			buildPhases = (
+				BBCC50741C6188A3000DAC28 /* Sources */,
+				BBCC50751C6188A3000DAC28 /* Frameworks */,
+				BBCC50761C6188A3000DAC28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFStepper;
+			productName = SFStepper;
+			productReference = BBCC50781C6188A3000DAC28 /* SFStepper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBCC50901C6188A3000DAC28 /* SFStepperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBCC509D1C6188A3000DAC28 /* Build configuration list for PBXNativeTarget "SFStepperTests" */;
+			buildPhases = (
+				BBCC508D1C6188A3000DAC28 /* Sources */,
+				BBCC508E1C6188A3000DAC28 /* Frameworks */,
+				BBCC508F1C6188A3000DAC28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBCC50931C6188A3000DAC28 /* PBXTargetDependency */,
+			);
+			name = SFStepperTests;
+			productName = SFStepperTests;
+			productReference = BBCC50911C6188A3000DAC28 /* SFStepperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBCC50701C6188A3000DAC28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = sinfo;
+				TargetAttributes = {
+					BBCC50771C6188A3000DAC28 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					BBCC50901C6188A3000DAC28 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = BBCC50771C6188A3000DAC28;
+					};
+				};
+			};
+			buildConfigurationList = BBCC50731C6188A3000DAC28 /* Build configuration list for PBXProject "SFStepper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBCC506F1C6188A3000DAC28;
+			productRefGroup = BBCC50791C6188A3000DAC28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBCC50771C6188A3000DAC28 /* SFStepper */,
+				BBCC50901C6188A3000DAC28 /* SFStepperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBCC50761C6188A3000DAC28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCC508B1C6188A3000DAC28 /* LaunchScreen.storyboard in Resources */,
+				BBCC50881C6188A3000DAC28 /* Assets.xcassets in Resources */,
+				BBCC50861C6188A3000DAC28 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCC508F1C6188A3000DAC28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBCC50741C6188A3000DAC28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCC50831C6188A3000DAC28 /* ViewController.m in Sources */,
+				BBCC50801C6188A3000DAC28 /* AppDelegate.m in Sources */,
+				BBCC50A41C618939000DAC28 /* SFStepper.m in Sources */,
+				BBCC507D1C6188A3000DAC28 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCC508D1C6188A3000DAC28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCC50961C6188A3000DAC28 /* SFStepperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBCC50931C6188A3000DAC28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBCC50771C6188A3000DAC28 /* SFStepper */;
+			targetProxy = BBCC50921C6188A3000DAC28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBCC50841C6188A3000DAC28 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBCC50851C6188A3000DAC28 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BBCC50891C6188A3000DAC28 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBCC508A1C6188A3000DAC28 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBCC50981C6188A3000DAC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BBCC50991C6188A3000DAC28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBCC509B1C6188A3000DAC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SFStepper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.sinfo-inc.SFStepper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BBCC509C1C6188A3000DAC28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SFStepper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.sinfo-inc.SFStepper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BBCC509E1C6188A3000DAC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SFStepperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.sinfo-inc.SFStepperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFStepper.app/SFStepper";
+			};
+			name = Debug;
+		};
+		BBCC509F1C6188A3000DAC28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SFStepperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.sinfo-inc.SFStepperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFStepper.app/SFStepper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBCC50731C6188A3000DAC28 /* Build configuration list for PBXProject "SFStepper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCC50981C6188A3000DAC28 /* Debug */,
+				BBCC50991C6188A3000DAC28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBCC509A1C6188A3000DAC28 /* Build configuration list for PBXNativeTarget "SFStepper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCC509B1C6188A3000DAC28 /* Debug */,
+				BBCC509C1C6188A3000DAC28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BBCC509D1C6188A3000DAC28 /* Build configuration list for PBXNativeTarget "SFStepperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCC509E1C6188A3000DAC28 /* Debug */,
+				BBCC509F1C6188A3000DAC28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBCC50701C6188A3000DAC28 /* Project object */;
+}
