@@ -15,9 +15,9 @@ static int kDefaultMaxLength = 11;
 @interface SFStepper() <UITextFieldDelegate>
 
 //UIControls
-@property (nonatomic, strong)  UITextField *centerTextfield;
-@property (nonatomic, strong)  UIButton *downButton;
-@property (nonatomic, strong)  UIButton *upButton;
+@property (nonatomic, strong) UITextField *centerTextfield;
+@property (nonatomic, strong) UIButton *downButton;
+@property (nonatomic, strong) UIButton *upButton;
 
 @property (nonatomic, strong) NSTimer *sTimer;		// Press and hold processing of a button
 @end
@@ -64,7 +64,10 @@ static int kDefaultMaxLength = 11;
                                    self.frame.size.height);
     
     [_downButton setTitle:@"-" forState:UIControlStateNormal];
-    [_downButton addTarget:self action:@selector(downButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    [_downButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchDown];
+    [_downButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchCancel];
+    [_downButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchDragOutside];
+    [_downButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchUpInside];
     
     self.upButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _upButton.frame = CGRectMake(_centerTextfield.frame.origin.x + _centerTextfield.frame.size.width,
@@ -73,7 +76,10 @@ static int kDefaultMaxLength = 11;
                                  self.frame.size.height);
     
     [_upButton setTitle:@"+" forState:UIControlStateNormal];
-    [_upButton addTarget:self action:@selector(upButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    [_upButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchDown];
+    [_upButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchCancel];
+    [_upButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchDragOutside];
+    [_upButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:_centerTextfield];
     [self addSubview:_downButton];
@@ -87,6 +93,7 @@ static int kDefaultMaxLength = 11;
 
 - (void)initValues {
     self.maximumLength = kDefaultMaxLength;
+    self.repeatSpeed = 0.3f;
     
 }
 
@@ -200,10 +207,9 @@ static int kDefaultMaxLength = 11;
     return YES;
 }
 
-#pragma mark - Action
-- (void)downButtonTouched:(UIButton *)sender {
+- (void)repeatAction:(NSTimer *)timer {
     
-    NSDecimalNumber *down_value = [NSDecimalNumber zero];
+    NSDecimalNumber *tmp_value = [NSDecimalNumber zero];
     
     NSString *default_value = @"0";
     if ([_delegate respondsToSelector:@selector(defaultValueInSFStepper)]) {
@@ -216,47 +222,44 @@ static int kDefaultMaxLength = 11;
     NSDecimalNumber *origin_value = [NSDecimalNumber decimalNumberWithString:_centerTextfield.text];
     NSDecimalNumber *tick_value = [NSDecimalNumber decimalNumberWithString:[_delegate tickValueInStepper]];
     
-    down_value = [origin_value decimalNumberBySubtracting:tick_value];
+    if (timer.userInfo == _downButton) {
+        tmp_value = [origin_value decimalNumberBySubtracting:tick_value];
+    }else if (timer.userInfo == _upButton) {
+        tmp_value = [origin_value decimalNumberByAdding:tick_value];
+    }else {
+        return;
+    }
     
     NSDecimalNumber *maximum_value = [NSDecimalNumber decimalNumberWithString:[_delegate maximumValueInStepper]];
     NSDecimalNumber *minimum_value = [NSDecimalNumber decimalNumberWithString:[_delegate minimumValueInStepper]];
     
-    if(down_value.doubleValue > maximum_value.doubleValue) {
-        down_value = maximum_value;
-    }else if(down_value.doubleValue < minimum_value.doubleValue) {
-        down_value = minimum_value;
+    if([tmp_value compare:maximum_value] == NSOrderedDescending) {
+        tmp_value = maximum_value;
+    }else if([tmp_value compare:minimum_value] == NSOrderedAscending) {
+        tmp_value = minimum_value;
     }
     
-    self.value = down_value.stringValue;
+    self.value = tmp_value.stringValue;
 }
 
-- (void)upButtonTouched:(UIButton *)sender {
+
+#pragma mark - Action
+- (void)buttonTouched:(UIButton *)sender {
     
-    NSDecimalNumber *down_value = [NSDecimalNumber zero];
-    
-    NSString *default_value = @"0";
-    if ([_delegate respondsToSelector:@selector(defaultValueInSFStepper)]) {
-        default_value = [_delegate defaultValueInSFStepper];
-    }
-    if ([_centerTextfield.text isEqualToString:@""]) {
-        _centerTextfield.text = default_value;
+    if (_sTimer) {
+        [_sTimer invalidate];
     }
     
-    NSDecimalNumber *origin_value = [NSDecimalNumber decimalNumberWithString:_centerTextfield.text];
-    NSDecimalNumber *tick_value = [NSDecimalNumber decimalNumberWithString:[_delegate tickValueInStepper]];
+    self.sTimer = [NSTimer scheduledTimerWithTimeInterval:_repeatSpeed target:self selector:@selector(repeatAction:) userInfo:sender repeats:YES];
     
-    down_value = [origin_value decimalNumberByAdding:tick_value];
+    [_sTimer fire];
+}
+
+- (void)buttonCanceled:(UIButton *)sender {
     
-    NSDecimalNumber *maximum_value = [NSDecimalNumber decimalNumberWithString:[_delegate maximumValueInStepper]];
-    NSDecimalNumber *minimum_value = [NSDecimalNumber decimalNumberWithString:[_delegate minimumValueInStepper]];
-    
-    if(down_value.doubleValue > maximum_value.doubleValue) {
-        down_value = maximum_value;
-    }else if(down_value.doubleValue < minimum_value.doubleValue) {
-        down_value = minimum_value;
+    if(_sTimer) {
+        [_sTimer invalidate];
     }
-    
-    self.value = down_value.stringValue;
 }
 
 #pragma mark - helper methods
@@ -265,40 +268,4 @@ static int kDefaultMaxLength = 11;
     return  [NSString stringWithFormat:@"%@%ld%@", @"%0.0", (long)scale, @"f"];
 }
 
-#if 0
-
-#pragma mark - IBAction
--(IBAction)onTap:(id)sender {
-    UIButton* targetB = (UIButton*)sender;
-    if (!targetB.enabled) {
-        return;
-    }
-    targetB.enabled = NO;
-}
-
-- (IBAction)buttonRepeatCancel:(id)sender {
-	if(_sTimer) {
-		[_sTimer invalidate];
-		self.sTimer = nil;
-	}
-}
-
-- (IBAction)buttonRepeatePlus:(id)sender {
-	[self actionButtonPlus:sender];
-	
-	if(_sTimer) {
-		[_sTimer invalidate];
-	}
-	self.sTimer = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(actionButtonPlus:) userInfo:sender repeats:YES];
-}
-
-- (IBAction)buttonRepeateMinus:(id)sender {
-	[self actionButtonMinus:sender];
-	
-	if(_sTimer) {
-		[_sTimer invalidate];
-	}
-	self.sTimer = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(actionButtonMinus:) userInfo:sender repeats:YES];
-}
-#endif
 @end
