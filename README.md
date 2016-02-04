@@ -1,7 +1,7 @@
 # SFStepper
 
 ## Overview
-SFFocusViewLayout is a UICollectionViewLayout subclass for displaying focused content on UICollectionView which is the largest cell of all.
+hogehoge
 
 <p align="center" >
   
