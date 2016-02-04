@@ -26,6 +26,74 @@ static int kDefaultMaxLength = 11;
 
 @dynamic value;
 
+#pragma mark - drawRect
+- (void)drawRect:(CGRect)rect {
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGRect myFrame = self.bounds;
+    
+    //left button
+    CGContextSetStrokeColorWithColor(context,_tintColor.CGColor);
+    CGContextSetLineWidth(context, 1.f);
+    CGContextMoveToPoint(context, 0, 0);
+    CGContextAddLineToPoint(context, myFrame.size.height, 0);
+    CGContextAddLineToPoint(context, myFrame.size.height, myFrame.size.height);
+    CGContextAddLineToPoint(context, 0, myFrame.size.height);
+    CGContextAddLineToPoint(context, 0, 0);
+    CGContextStrokePath(context);
+    
+    //center textfield
+    CGRectInset(myFrame, 1,1);
+    UIRectFrame(myFrame);
+    
+    //right button
+    CGContextMoveToPoint(context, myFrame.size.width - myFrame.size.height, 0);
+    CGContextAddLineToPoint(context, myFrame.size.width, 0);
+    CGContextAddLineToPoint(context, myFrame.size.width, myFrame.size.height);
+    CGContextAddLineToPoint(context, myFrame.size.width - myFrame.size.height, myFrame.size.height);
+    CGContextAddLineToPoint(context, myFrame.size.width - myFrame.size.height, 0);
+    CGContextStrokePath(context);
+
+#if TARGET_INTERFACE_BUILDER
+    //draw text
+#if 1
+    CGContextSetLineWidth(context, 2.f);
+    CGContextMoveToPoint(context, myFrame.size.height/2.f - 8.f, myFrame.size.height/2.f);
+    CGContextAddLineToPoint(context, myFrame.size.height/2.f + 8.f, myFrame.size.height/2.f);
+    CGContextStrokePath(context);
+    
+    CGContextMoveToPoint(context, (myFrame.size.width - myFrame.size.height/2.f) - 8.f, myFrame.size.height/2.f);
+    CGContextAddLineToPoint(context, (myFrame.size.width - myFrame.size.height/2.f) + 8.f, myFrame.size.height/2.f);
+    CGContextStrokePath(context);
+    CGContextMoveToPoint(context, (myFrame.size.width - myFrame.size.height/2.f), myFrame.size.height/2.f - 8.f);
+    CGContextAddLineToPoint(context, (myFrame.size.width - myFrame.size.height/2.f), myFrame.size.height/2.f + 8.f);
+    CGContextStrokePath(context);
+#else
+    
+    NSMutableParagraphStyle *paragraphStyle = NSMutableParagraphStyle.new;
+    paragraphStyle.alignment= NSTextAlignmentCenter;
+    
+    NSDictionary *stringAttributes = @{NSForegroundColorAttributeName:_tintColor,
+                                       NSFontAttributeName:[UIFont systemFontOfSize:_fontSize],
+                                       NSParagraphStyleAttributeName:paragraphStyle};
+    
+    NSAttributedString *minusString = [[NSAttributedString alloc] initWithString:@"-" attributes:stringAttributes];
+    [minusString drawInRect:CGRectMake(0,
+                                       0,
+                                       myFrame.size.height,
+                                       myFrame.size.height)];
+    
+    NSAttributedString *plusString = [[NSAttributedString alloc] initWithString:@"+" attributes:stringAttributes];
+    [plusString drawInRect:CGRectMake((myFrame.size.width - myFrame.size.height),
+                                      0,
+                                      myFrame.size.height,
+                                      myFrame.size.height)];
+#endif
+    
+#endif
+
+}
+
 #pragma mark - getter, setter
 - (BOOL)isEnabled {
     return super.enabled;
@@ -55,15 +123,18 @@ static int kDefaultMaxLength = 11;
                                                                          self.frame.size.height)];
     _centerTextfield.delegate = self;
     _centerTextfield.textAlignment = NSTextAlignmentCenter;
+    _centerTextfield.font = [UIFont systemFontOfSize:_fontSize];
     
     self.downButton = [UIButton buttonWithType:UIButtonTypeCustom];
-
     _downButton.frame = CGRectMake(0,
                                    0,
                                    self.frame.size.height,
                                    self.frame.size.height);
     
     [_downButton setTitle:@"-" forState:UIControlStateNormal];
+    [_downButton setTitleColor:_tintColor forState:UIControlStateNormal];
+    _downButton.titleLabel.font = [UIFont systemFontOfSize:_fontSize];
+    
     [_downButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchDown];
     [_downButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchCancel];
     [_downButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchDragOutside];
@@ -76,6 +147,8 @@ static int kDefaultMaxLength = 11;
                                  self.frame.size.height);
     
     [_upButton setTitle:@"+" forState:UIControlStateNormal];
+    [_upButton setTitleColor:_tintColor forState:UIControlStateNormal];
+    _upButton.titleLabel.font = [UIFont systemFontOfSize:_fontSize];
     [_upButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchDown];
     [_upButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchCancel];
     [_upButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchDragOutside];
@@ -86,9 +159,9 @@ static int kDefaultMaxLength = 11;
     [self addSubview:_upButton];
     
     //debug code.
-    _centerTextfield.backgroundColor = [UIColor yellowColor];
-    _downButton.backgroundColor = [UIColor greenColor];
-    _upButton.backgroundColor = [UIColor orangeColor];
+//    _centerTextfield.backgroundColor = [UIColor yellowColor];
+//    _downButton.backgroundColor = [UIColor greenColor];
+//    _upButton.backgroundColor = [UIColor orangeColor];
 }
 
 - (void)initValues {
@@ -110,10 +183,14 @@ static int kDefaultMaxLength = 11;
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self initUIs];
-        [self initValues];        
+        //initialize is awakeFromNib.
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    [self initUIs];
+    [self initValues];
 }
 
 #pragma mark - UITextFieldDelegate

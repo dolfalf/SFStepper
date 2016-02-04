@@ -24,7 +24,9 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable NSString *value;                      // no formatted value (comma, +, -)
 @property (nonatomic, assign) IBInspectable NSInteger maximumLength;              // default is 11
 @property (nonatomic, assign) IBInspectable CGFloat repeatSpeed;                    //long pressed update text
+@property (nonatomic, assign) IBInspectable CGFloat fontSize;
 @property (nonatomic, assign) IBInspectable NSTextAlignment centerTextAlignment;
+@property (nonatomic, strong) IBInspectable UIColor *tintColor;
 @end
 
 @protocol SFStepperDelegate <UITextFieldDelegate>
