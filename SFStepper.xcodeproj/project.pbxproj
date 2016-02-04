@@ -15,6 +15,7 @@
 		BBCC508B1C6188A3000DAC28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCC50891C6188A3000DAC28 /* LaunchScreen.storyboard */; };
 		BBCC50961C6188A3000DAC28 /* SFStepperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC50951C6188A3000DAC28 /* SFStepperTests.m */; };
 		BBCC50A41C618939000DAC28 /* SFStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC50A21C618939000DAC28 /* SFStepper.m */; };
+		BBE86A7F1C633C6600058F59 /* screenshot01.gif in Resources */ = {isa = PBXBuildFile; fileRef = BBE86A7E1C633C6600058F59 /* screenshot01.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		BBCC50971C6188A3000DAC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBCC50A11C618939000DAC28 /* SFStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFStepper.h; sourceTree = "<group>"; };
 		BBCC50A21C618939000DAC28 /* SFStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFStepper.m; sourceTree = "<group>"; };
+		BBE86A7E1C633C6600058F59 /* screenshot01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = screenshot01.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				BBCC50871C6188A3000DAC28 /* Assets.xcassets */,
 				BBCC50891C6188A3000DAC28 /* LaunchScreen.storyboard */,
 				BBCC508C1C6188A3000DAC28 /* Info.plist */,
+				BBE86A7D1C633C5800058F59 /* Screenshots */,
 				BBCC507B1C6188A3000DAC28 /* Supporting Files */,
 			);
 			path = SFStepper;
@@ -122,6 +125,14 @@
 				BBCC50A21C618939000DAC28 /* SFStepper.m */,
 			);
 			path = SFStepper;
+			sourceTree = "<group>";
+		};
+		BBE86A7D1C633C5800058F59 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				BBE86A7E1C633C6600058F59 /* screenshot01.gif */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				BBCC508B1C6188A3000DAC28 /* LaunchScreen.storyboard in Resources */,
 				BBCC50881C6188A3000DAC28 /* Assets.xcassets in Resources */,
 				BBCC50861C6188A3000DAC28 /* Main.storyboard in Resources */,
+				BBE86A7F1C633C6600058F59 /* screenshot01.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
