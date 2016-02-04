@@ -5,7 +5,7 @@ SFFocusViewLayout is a UICollectionViewLayout subclass for displaying focused co
 
 <p align="center" >
   
-	<img src="./Screenshots/screenshot01.gif" alt="SFStepper" title="SFStepper">
+	<img src="https://github.com/dolfalf/SFStepper/blob/master/SFStepper/Screenshots/screenshot01.gif" alt="SFStepper" title="SFStepper">
 
 </p>
 
