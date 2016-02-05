@@ -15,8 +15,8 @@ IB_DESIGNABLE
 
 @property (nonatomic, assign) IBOutlet id<SFStepperDelegate> delegate;
 
-@property (nonatomic, strong) UIImage *downButtonImage;     // use in preference to text
-@property (nonatomic, strong) UIImage *upButtonImage;       // use in preference to text
+@property (nonatomic, strong) IBInspectable UIImage *downButtonImage;     // use in preference to text
+@property (nonatomic, strong) IBInspectable UIImage *upButtonImage;       // use in preference to text
 @property (nonatomic, strong) NSString *downButtonTitle;    // default is '-'
 @property (nonatomic, strong) NSString *upButtonTitle;      // default is '+'
 

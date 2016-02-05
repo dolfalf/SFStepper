@@ -38,6 +38,8 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="maximumLength">
                                         <integer key="value" value="11"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="downButtonImage" value="minus_button"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="upButtonImage" value="plus_button"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -56,4 +58,8 @@
             <point key="canvasLocation" x="396" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="minus_button" width="128" height="128"/>
+        <image name="plus_button" width="128" height="128"/>
+    </resources>
 </document>

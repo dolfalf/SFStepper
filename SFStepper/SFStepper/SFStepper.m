@@ -32,19 +32,50 @@ static int kDefaultMaxLength = 11;
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGRect myFrame = self.bounds;
     
-    //left button
     CGContextSetStrokeColorWithColor(context,_tintColor.CGColor);
     CGContextSetLineWidth(context, 1.f);
+    
+    //left button
+    if (_downButtonImage == nil) {
+        CGContextMoveToPoint(context, 0, 0);
+        CGContextAddLineToPoint(context, myFrame.size.height, 0);
+        CGContextAddLineToPoint(context, myFrame.size.height, myFrame.size.height);
+        CGContextAddLineToPoint(context, 0, myFrame.size.height);
+        CGContextAddLineToPoint(context, 0, 0);
+        CGContextStrokePath(context);
+    }
+    
+    
+    //center textfield
+    float margin = 4.f;
+    CGRect textfield_rect = CGRectMake(myFrame.size.height + margin,
+                                       0,
+                                       myFrame.size.width-((myFrame.size.height+margin)*2.f),
+                                       myFrame.size.height);
+    
+    CGRectInset(textfield_rect, 1,1);
+    UIRectFrame(textfield_rect);
+    
+    
+    //right button
+    if (_upButtonImage == nil) {
+        CGContextMoveToPoint(context, myFrame.size.width - myFrame.size.height, 0);
+        CGContextAddLineToPoint(context, myFrame.size.width, 0);
+        CGContextAddLineToPoint(context, myFrame.size.width, myFrame.size.height);
+        CGContextAddLineToPoint(context, myFrame.size.width - myFrame.size.height, myFrame.size.height);
+        CGContextAddLineToPoint(context, myFrame.size.width - myFrame.size.height, 0);
+        CGContextStrokePath(context);
+    }
+
+#if TARGET_INTERFACE_BUILDER
+    
+    //left button
     CGContextMoveToPoint(context, 0, 0);
     CGContextAddLineToPoint(context, myFrame.size.height, 0);
     CGContextAddLineToPoint(context, myFrame.size.height, myFrame.size.height);
     CGContextAddLineToPoint(context, 0, myFrame.size.height);
     CGContextAddLineToPoint(context, 0, 0);
     CGContextStrokePath(context);
-    
-    //center textfield
-    CGRectInset(myFrame, 1,1);
-    UIRectFrame(myFrame);
     
     //right button
     CGContextMoveToPoint(context, myFrame.size.width - myFrame.size.height, 0);
@@ -53,8 +84,7 @@ static int kDefaultMaxLength = 11;
     CGContextAddLineToPoint(context, myFrame.size.width - myFrame.size.height, myFrame.size.height);
     CGContextAddLineToPoint(context, myFrame.size.width - myFrame.size.height, 0);
     CGContextStrokePath(context);
-
-#if TARGET_INTERFACE_BUILDER
+    
     //draw text
 #if 1
     CGContextSetLineWidth(context, 2.f);
@@ -131,9 +161,13 @@ static int kDefaultMaxLength = 11;
                                    self.frame.size.height,
                                    self.frame.size.height);
     
-    [_downButton setTitle:@"-" forState:UIControlStateNormal];
-    [_downButton setTitleColor:_tintColor forState:UIControlStateNormal];
-    _downButton.titleLabel.font = [UIFont systemFontOfSize:_fontSize];
+    if (_downButtonImage) {
+        [_downButton setImage:_downButtonImage forState:UIControlStateNormal];
+    }else {
+        [_downButton setTitle:@"-" forState:UIControlStateNormal];
+        [_downButton setTitleColor:_tintColor forState:UIControlStateNormal];
+        _downButton.titleLabel.font = [UIFont systemFontOfSize:_fontSize];
+    }
     
     [_downButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchDown];
     [_downButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchCancel];
@@ -146,9 +180,14 @@ static int kDefaultMaxLength = 11;
                                  self.frame.size.height,
                                  self.frame.size.height);
     
-    [_upButton setTitle:@"+" forState:UIControlStateNormal];
-    [_upButton setTitleColor:_tintColor forState:UIControlStateNormal];
-    _upButton.titleLabel.font = [UIFont systemFontOfSize:_fontSize];
+    if (_upButton) {
+        [_upButton setImage:_upButtonImage forState:UIControlStateNormal];
+    }else {
+        [_upButton setTitle:@"+" forState:UIControlStateNormal];
+        [_upButton setTitleColor:_tintColor forState:UIControlStateNormal];
+        _upButton.titleLabel.font = [UIFont systemFontOfSize:_fontSize];
+    }
+    
     [_upButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchDown];
     [_upButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchCancel];
     [_upButton addTarget:self action:@selector(buttonCanceled:) forControlEvents:UIControlEventTouchDragOutside];
