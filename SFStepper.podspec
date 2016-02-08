@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
   s.requires_arc = true
 
-  s.public_header_files = 'SFStepper/*.h'
-  s.source_files  = 'SFStepper/**/*.{h,m}'
+  s.public_header_files = 'SFStepper/Classes/*.h'
+  s.source_files  = 'SFStepper/Classes/*.{h,m}'
 end
