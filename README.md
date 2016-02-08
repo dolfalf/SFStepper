@@ -14,7 +14,7 @@ hogehoge
 
 1. Add a pod entry for MBProgressHUD to your Podfile `pod 'SFStepper', '~> 0.1.0'`
 2. Install the pod(s) by running `pod install`.
-3. Include MBProgressHUD wherever you need it with `#import "SFStepper.h"`.
+3. Include SFStepper wherever you need it with `#import "SFStepper.h"`.
 
 ## Installation
 
