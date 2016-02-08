@@ -14,8 +14,8 @@
 		BBCC50881C6188A3000DAC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBCC50871C6188A3000DAC28 /* Assets.xcassets */; };
 		BBCC508B1C6188A3000DAC28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCC50891C6188A3000DAC28 /* LaunchScreen.storyboard */; };
 		BBCC50961C6188A3000DAC28 /* SFStepperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC50951C6188A3000DAC28 /* SFStepperTests.m */; };
-		BBCC50A41C618939000DAC28 /* SFStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC50A21C618939000DAC28 /* SFStepper.m */; };
 		BBE86A7F1C633C6600058F59 /* screenshot01.gif in Resources */ = {isa = PBXBuildFile; fileRef = BBE86A7E1C633C6600058F59 /* screenshot01.gif */; };
+		BBF80BE01C6884E800CDFF5E /* SFStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF80BDE1C6884E800CDFF5E /* SFStepper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,21 +30,21 @@
 
 /* Begin PBXFileReference section */
 		BBCC50781C6188A3000DAC28 /* SFStepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFStepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBCC507C1C6188A3000DAC28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BBCC507E1C6188A3000DAC28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BBCC507F1C6188A3000DAC28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BBCC50811C6188A3000DAC28 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BBCC50821C6188A3000DAC28 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BBCC507C1C6188A3000DAC28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Example/main.m; sourceTree = "<group>"; };
+		BBCC507E1C6188A3000DAC28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Example/AppDelegate.h; sourceTree = "<group>"; };
+		BBCC507F1C6188A3000DAC28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Example/AppDelegate.m; sourceTree = "<group>"; };
+		BBCC50811C6188A3000DAC28 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Example/ViewController.h; sourceTree = "<group>"; };
+		BBCC50821C6188A3000DAC28 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Example/ViewController.m; sourceTree = "<group>"; };
 		BBCC50851C6188A3000DAC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BBCC50871C6188A3000DAC28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBCC50871C6188A3000DAC28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Example/Assets.xcassets; sourceTree = "<group>"; };
 		BBCC508A1C6188A3000DAC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BBCC508C1C6188A3000DAC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCC508C1C6188A3000DAC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Example/Info.plist; sourceTree = "<group>"; };
 		BBCC50911C6188A3000DAC28 /* SFStepperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFStepperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCC50951C6188A3000DAC28 /* SFStepperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFStepperTests.m; sourceTree = "<group>"; };
 		BBCC50971C6188A3000DAC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBCC50A11C618939000DAC28 /* SFStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFStepper.h; sourceTree = "<group>"; };
-		BBCC50A21C618939000DAC28 /* SFStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFStepper.m; sourceTree = "<group>"; };
 		BBE86A7E1C633C6600058F59 /* screenshot01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = screenshot01.gif; sourceTree = "<group>"; };
+		BBF80BDD1C6884E800CDFF5E /* SFStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFStepper.h; sourceTree = "<group>"; };
+		BBF80BDE1C6884E800CDFF5E /* SFStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFStepper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +86,10 @@
 		BBCC507A1C6188A3000DAC28 /* SFStepper */ = {
 			isa = PBXGroup;
 			children = (
+				BBF80BDC1C6884E800CDFF5E /* Classes */,
+				BBF80BDF1C6884E800CDFF5E /* Example */,
 				BBCC507E1C6188A3000DAC28 /* AppDelegate.h */,
 				BBCC507F1C6188A3000DAC28 /* AppDelegate.m */,
-				BBCC50A01C6188D9000DAC28 /* SFStepper */,
 				BBCC50811C6188A3000DAC28 /* ViewController.h */,
 				BBCC50821C6188A3000DAC28 /* ViewController.m */,
 				BBCC50841C6188A3000DAC28 /* Main.storyboard */,
@@ -118,21 +119,28 @@
 			path = SFStepperTests;
 			sourceTree = "<group>";
 		};
-		BBCC50A01C6188D9000DAC28 /* SFStepper */ = {
-			isa = PBXGroup;
-			children = (
-				BBCC50A11C618939000DAC28 /* SFStepper.h */,
-				BBCC50A21C618939000DAC28 /* SFStepper.m */,
-			);
-			path = SFStepper;
-			sourceTree = "<group>";
-		};
 		BBE86A7D1C633C5800058F59 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
 				BBE86A7E1C633C6600058F59 /* screenshot01.gif */,
 			);
 			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		BBF80BDC1C6884E800CDFF5E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BBF80BDD1C6884E800CDFF5E /* SFStepper.h */,
+				BBF80BDE1C6884E800CDFF5E /* SFStepper.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BBF80BDF1C6884E800CDFF5E /* Example */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +246,7 @@
 			files = (
 				BBCC50831C6188A3000DAC28 /* ViewController.m in Sources */,
 				BBCC50801C6188A3000DAC28 /* AppDelegate.m in Sources */,
-				BBCC50A41C618939000DAC28 /* SFStepper.m in Sources */,
+				BBF80BE01C6884E800CDFF5E /* SFStepper.m in Sources */,
 				BBCC507D1C6188A3000DAC28 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +276,7 @@
 				BBCC50851C6188A3000DAC28 /* Base */,
 			);
 			name = Main.storyboard;
+			path = Example;
 			sourceTree = "<group>";
 		};
 		BBCC50891C6188A3000DAC28 /* LaunchScreen.storyboard */ = {
@@ -276,6 +285,7 @@
 				BBCC508A1C6188A3000DAC28 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -365,7 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SFStepper/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SFStepper/Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.sinfo-inc.SFStepper";
@@ -377,7 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SFStepper/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SFStepper/Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.sinfo-inc.SFStepper";
